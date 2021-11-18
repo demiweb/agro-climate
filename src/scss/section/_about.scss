@@ -1,0 +1,89 @@
+@import "../vars";
+@import "../mixins";
+
+.about {
+  background: $green-3-color;
+  position: relative;
+
+  > img {
+    position: absolute;
+    &:nth-child(1) {
+
+      left: 0;
+      top: 10px;
+    }
+    &:nth-child(2) {
+      right: 0;
+      top: 0;
+    }
+    &:nth-child(3) {
+        right: 0;
+        bottom: 394px;
+    }
+  }
+
+  .about__wrapper {
+
+    padding: 90px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    .about__text {
+      max-width: 440px;
+
+      h2 {
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      p {
+        margin-bottom: 30px;
+        color: $green-2-color;
+      }
+
+      a {
+        @include btn(227px, 64px);
+        margin-top: 50px;
+      }
+    }
+
+    .about__cards {
+      position: absolute;
+      top: calc(-33.33333% + 60px);
+      right: 125px;
+
+      .card__body {
+        width: 429px;
+        padding: 30px 53px;
+        background: white;
+        border-radius: 20px;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+
+        svg {
+          margin-bottom: 17px;
+        }
+
+        span {
+          color: $dark-1-color;
+          margin-bottom: 15px;
+          display: block;
+          font-weight: 700;
+        }
+
+        p {
+
+        }
+      }
+    }
+  }
+  .about-bg {
+    height: 394px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}

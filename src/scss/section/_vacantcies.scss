@@ -1,0 +1,117 @@
+@import "../vars";
+@import "../mixins";
+
+.vacancies {
+  background: white;
+  padding: 100px 0;
+
+  .vacancies__wrapper {
+    .vacancies__top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+
+      > div {
+        &:first-child {
+          max-width: 600px;
+
+          h2 {
+            margin-bottom: 20px;
+          }
+        }
+
+        &:last-child {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .vacancies__body {
+      .vacancies__list {
+        list-style: none;
+
+        > :not(:first-child) {
+          margin-top: 66px;
+        }
+
+        .list__item {
+
+          > div {
+            &:first-child {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-bottom: 20px;
+              border-bottom: 1px solid #DEDEDE;
+              span {
+                font-size: 18px;
+                font-weight: 700;
+              }
+
+              a {
+                border: 1px solid $green-main-color;
+
+                &:hover {
+                  background: $green-main-color;
+                  color: white;
+                }
+              }
+            }
+
+            &:last-child {
+              padding: 60px 40px;
+              background: #F6F6F6;
+              opacity: 0;
+              max-height: 0;
+              overflow: hidden;
+              transition: opacity .6s, max-height .6s;
+              display: flex;
+
+              > div {
+                &:first-child {
+                  flex: 0 0 438px;
+                  height: 258px;
+
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+
+                &:last-child {
+                  margin-left: 50px;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+
+                  h3 {
+                    margin-bottom: 20px;
+                  }
+
+                  p {
+                    margin-bottom: auto;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .list__item.active {
+          margin-top: 50px;
+          margin-bottom: 109px;
+
+          > div {
+            &:last-child {
+              max-height: 500px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
