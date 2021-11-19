@@ -38,6 +38,8 @@
         }
 
         .list__item {
+          margin: 50px auto 109px;
+          max-width: 1370px;
 
           > div {
             &:first-child {
@@ -75,9 +77,9 @@
             }
 
             &:last-child {
-              padding: 60px 40px;
               background: #F6F6F6;
               max-height: 0;
+              padding: 0;
               overflow: hidden;
               display: flex;
               transition: all .6s ease;
@@ -121,8 +123,6 @@
         }
 
         .list__item.active {
-          margin: 50px auto 109px;
-
           > div {
             &:first-child {
               a {
@@ -131,7 +131,10 @@
                 }
               }
             }
+
             &:last-child {
+              max-height: inherit;
+              padding: 60px 40px;
               align-items: center;
             }
           }

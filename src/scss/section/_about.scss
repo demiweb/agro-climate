@@ -52,6 +52,7 @@
     }
 
     .about__cards {
+      z-index: 6;
       position: absolute;
       top: calc(-33.33333% + 60px);
       right: 125px;
@@ -85,9 +86,6 @@
   .about-bg {
     height: 394px;
     width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: 50% 50%;
+    background: transparent;
   }
 }

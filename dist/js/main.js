@@ -67,30 +67,22 @@ allLozadImg();
 
 new Rellax('.parallax')
 
-const vacanciesList = [...document.querySelectorAll('.vacancies__list .list__item')]
-const vacanciesBtn = [...document.querySelectorAll('.list__item>div>.btn')]
-
-// if (!vacanciesList.length) {
-//
-// } else {
-//     vacanciesBtn.forEach((elem, index) => {
-//         elem.addEventListener('click', function (e) {
-//             e.preventDefault()
-//             vacanciesList.forEach((el, idx) => {
-//                 el.classList.remove('active')
-//                 if (index === idx) {
-//                     el.classList.toggle('active')
-//                 }
-//             })
-//         })
-//     })
-// }
-
 const goToItems = [...document.querySelectorAll('.go-to span')]
 
 if (!goToItems.length) {
 
 } else {
+
+    goToItems.forEach((elem, index) => {
+        elem.addEventListener('click', function () {
+            const block = elem.getAttribute('data-go')
+            document.querySelector('' + block).scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            })
+        })
+    })
+
     window.addEventListener('load', goTo)
 
     window.addEventListener('scroll', goTo)
@@ -113,28 +105,16 @@ if (!goToItems.length) {
         itemOffset.forEach((elem, idx) => {
             goToItems[idx].classList.remove('active')
             goToItems[idx].innerHTML = idx + 1
-            if (elem[0] <= windowOffset && elem[1] > windowOffset) {
+            if (elem[0] - 1 <= windowOffset && elem[1] - 1 > windowOffset) {
                 goToItems[idx].classList.add('active')
                 goToItems[idx].innerHTML = sectionName[idx]
-            } else if (elem[0] <= windowOffset && !elem[1]) {
+            } else if (elem[0] - 1 <= windowOffset && !elem[1]) {
                 goToItems[idx].classList.add('active')
                 goToItems[idx].innerHTML = sectionName[idx]
             }
         })
     }
-
-    goToItems.forEach((elem, index) => {
-
-        elem.addEventListener('click', function () {
-            const block = elem.getAttribute('data-go')
-            document.querySelector('' + block).scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            })
-        })
-    })
 }
-
 
 
 document.querySelectorAll('.vacancies__list .list__item .btn').forEach(el => {
@@ -143,17 +123,13 @@ document.querySelectorAll('.vacancies__list .list__item .btn').forEach(el => {
 
         let content = el.parentElement.nextElementSibling
 
-        if (content.style.maxHeight) {
-            this.parentElement.parentElement.classList.remove('active')
+        if (!content.parentElement.classList.contains('active')) {
             document.querySelectorAll('.vacancies__list .list__item .content').forEach(el => {
-                el.style.maxHeight = null
+                el.parentElement.classList.remove('active')
             })
-        } else {
             this.parentElement.parentElement.classList.add('active')
-            document.querySelectorAll('.vacancies__list .list__item .content').forEach(el => {
-                el.style.maxHeight = null
-            })
-            content.style.maxHeight = content.scrollHeight + 'px'
+        } else {
+            this.parentElement.parentElement.classList.remove('active')
         }
     })
 })
