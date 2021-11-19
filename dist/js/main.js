@@ -70,21 +70,21 @@ new Rellax('.parallax')
 const vacanciesList = [...document.querySelectorAll('.vacancies__list .list__item')]
 const vacanciesBtn = [...document.querySelectorAll('.list__item>div>.btn')]
 
-if (!vacanciesList.length) {
-
-} else {
-    vacanciesBtn.forEach((elem, index) => {
-        elem.addEventListener('click', function (e) {
-            e.preventDefault()
-            vacanciesList.forEach((el, idx) => {
-                el.classList.remove('active')
-                if (index === idx) {
-                    el.classList.toggle('active')
-                }
-            })
-        })
-    })
-}
+// if (!vacanciesList.length) {
+//
+// } else {
+//     vacanciesBtn.forEach((elem, index) => {
+//         elem.addEventListener('click', function (e) {
+//             e.preventDefault()
+//             vacanciesList.forEach((el, idx) => {
+//                 el.classList.remove('active')
+//                 if (index === idx) {
+//                     el.classList.toggle('active')
+//                 }
+//             })
+//         })
+//     })
+// }
 
 const goToItems = [...document.querySelectorAll('.go-to span')]
 
@@ -134,6 +134,29 @@ if (!goToItems.length) {
         })
     })
 }
+
+
+
+document.querySelectorAll('.vacancies__list .list__item .btn').forEach(el => {
+    el.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        let content = el.parentElement.nextElementSibling
+
+        if (content.style.maxHeight) {
+            this.parentElement.parentElement.classList.remove('active')
+            document.querySelectorAll('.vacancies__list .list__item .content').forEach(el => {
+                el.style.maxHeight = null
+            })
+        } else {
+            this.parentElement.parentElement.classList.add('active')
+            document.querySelectorAll('.vacancies__list .list__item .content').forEach(el => {
+                el.style.maxHeight = null
+            })
+            content.style.maxHeight = content.scrollHeight + 'px'
+        }
+    })
+})
 
 function helloConsole() {
     const staticText = 'Made with ❤️ by Demiweb';

@@ -77,11 +77,10 @@
             &:last-child {
               padding: 60px 40px;
               background: #F6F6F6;
-              opacity: 0;
               max-height: 0;
               overflow: hidden;
-              transition: opacity .6s, max-height .6s;
               display: flex;
+              transition: all .6s ease;
 
               > div {
                 &:first-child {
@@ -123,7 +122,6 @@
 
         .list__item.active {
           margin: 50px auto 109px;
-          max-width: 1400px;
 
           > div {
             &:first-child {
@@ -135,8 +133,6 @@
             }
             &:last-child {
               align-items: center;
-              max-height: 100%;
-              opacity: 1;
             }
           }
         }
