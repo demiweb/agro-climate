@@ -632,8 +632,8 @@ p {
   margin-top: 20px;
 }
 .vacancies .vacancies__wrapper .vacancies__body .vacancies__list .list__item.active {
-  margin-top: 50px;
-  margin-bottom: 109px;
+  margin: 50px auto 109px;
+  max-width: 1400px;
 }
 .vacancies .vacancies__wrapper .vacancies__body .vacancies__list .list__item.active > div:first-child a svg {
   -webkit-transform: rotate(180deg);

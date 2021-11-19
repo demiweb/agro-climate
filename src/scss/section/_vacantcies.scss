@@ -122,8 +122,8 @@
         }
 
         .list__item.active {
-          margin-top: 50px;
-          margin-bottom: 109px;
+          margin: 50px auto 109px;
+          max-width: 1400px;
 
           > div {
             &:first-child {
