@@ -1,0 +1,277 @@
+@import "vars";
+@import "mixins";
+
+@media screen and (max-width: 1200px) {
+  .about {
+    .about__wrapper {
+      padding: 70px 0;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .about__text {
+        max-width: 90%;
+      }
+
+      .about__cards {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        top: auto;
+        right: auto;
+        margin-top: 30px;
+
+        .card__body {
+          width: calc(33.333333% - 15px);
+
+          &:not(:last-child) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .our-team {
+    .our-team__wrapper {
+      padding: 70px 0;
+
+      ul {
+        columns: 2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .about {
+    .about__wrapper {
+      .about__cards {
+        flex-direction: column;
+
+        .card__body {
+          width: 100%;
+
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .services {
+    padding: 70px 0;
+
+    .services__wrapper {
+      .services__body {
+        .services__card {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .our-team {
+    .our-team__wrapper {
+      ul {
+        columns: 1;
+
+        li {
+          p {
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .vacancies {
+    padding: 70px 0;
+
+    .vacancies__wrapper {
+      .vacancies__top {
+        > div {
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+
+      .vacancies__body {
+        .vacancies__list {
+          .list__item {
+            > div {
+              &:last-child {
+                flex-direction: column;
+                padding: 30px 0;
+
+                > div {
+                  &:first-child {
+                    width: 100%;
+                    margin-bottom: 10px;
+                  }
+
+                  &:last-child {
+                    margin-left: auto;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    height: calc(100vh - 95px);
+
+    .breadcrumbs {
+      display: none;
+    }
+
+    .hero__wrapper {
+      .hero__content {
+        margin-bottom: 15px;
+
+        .hero__logo {
+          width: 149px;
+          height: 60px;
+        }
+
+        span {
+          max-width: 100%;
+          font-size: 33px;
+          line-height: 38px;
+          margin-bottom: 15px;
+        }
+
+        p {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  .services {
+    .services__wrapper {
+      .services__body {
+        .services__card {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .go-to {
+    display: none;
+  }
+
+  .hero {
+    .hero-bg {
+      background-attachment: unset;
+    }
+  }
+
+  .about {
+    > img {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    .about-bg {
+      height: 279px;
+      background-attachment: unset;
+    }
+  }
+
+  .services {
+    .services__wrapper {
+      .services__body {
+        .services__card {
+          .card__top {
+            div {
+              align-items: center;
+
+              h3 {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .our-team {
+    .our-team-bg {
+      height: 137px;
+      background-attachment: unset;
+    }
+  }
+
+  .our-awards {
+    .our-awards__wrapper {
+      .our-awards-slider {
+        .our-awards-button-prev {
+          left: 10%;
+          right: auto;
+        }
+
+        .our-awards-button-next {
+          right: 10%;
+        }
+      }
+    }
+  }
+
+  .vacancies {
+    .vacancies__wrapper {
+      .vacancies__body {
+        .vacancies__list {
+          .list__item {
+            > div {
+              &:first-child {
+                a {
+                  width: 50px;
+                  height: 50px;
+
+                  span {
+                    display: none;
+                  }
+
+                  svg {
+                    margin: 0;
+                  }
+                }
+              }
+
+              &:last-child {
+                > div {
+                  &:first-child {
+                    max-height: 200px;
+                  }
+                }
+              }
+            }
+          }
+
+          .list__item.active {
+            > div {
+              &:first-child {
+                a {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

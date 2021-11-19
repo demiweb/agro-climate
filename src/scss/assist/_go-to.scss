@@ -6,7 +6,7 @@
   bottom: 50%;
   right: 36px;
   transform: translateY(50%);
-  z-index: 10;
+  z-index: 15;
 
   .go-to__list {
     display: flex;
@@ -31,12 +31,16 @@
         width: 39px;
         white-space: nowrap;
         overflow: hidden;
-        transition: all .4s ease;
+        transition: all .6s ease;
 
         &:hover {
           cursor: pointer;
-          width: 140px;
+
         }
+      }
+
+      span.active {
+        width: 140px;
       }
     }
   }

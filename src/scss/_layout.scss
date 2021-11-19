@@ -30,6 +30,10 @@ p {
   }
 }
 
+.parallax {
+  z-index: 10;
+}
+
 .container {
   max-width: 1430px;
   height: 100%;

@@ -1,3 +1,26 @@
+AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 120, // offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 400, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+});
+
 new Swiper('.our-awards-slider', {
     // Optional parameters
     direction: 'horizontal',
@@ -11,13 +34,27 @@ new Swiper('.our-awards-slider', {
         nextEl: '.our-awards-button-next',
         prevEl: '.our-awards-button-prev',
     },
+
+    breakpoints: {
+        1400: {
+            slidesPerView: 4,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 2
+        },
+        0: {
+            slidesPerView: 1
+        }
+    }
 });
 
 let allLazyLoad = [...document.querySelectorAll('.lazyload')];
 
 function allLozadImg() {
     allLazyLoad.forEach((el) => {
-        console.log(el)
         const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
         observer.observe();
         el.addEventListener('load', () => {
@@ -49,32 +86,54 @@ if (!vacanciesList.length) {
     })
 }
 
-
 const goToItems = [...document.querySelectorAll('.go-to span')]
 
-goToItems.forEach((elem, index) => {
-    const blockNames = ['Агроклімат', 'Про нас', 'Наші послуги', 'Наша команда',
-        'Наші винагороди',  'Вакансії']
+if (!goToItems.length) {
 
-    elem.addEventListener('click', function () {
-        const block = elem.getAttribute('data-go')
-        document.querySelector('' + block).scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        })
-    })
-    elem.addEventListener('mouseover', function () {
-        const name = this.getAttribute('data-go').replace('#', '')
-        blockNames.forEach((name, idx) => {
-            if (index === idx) {
-                this.innerHTML = name
+} else {
+    window.addEventListener('load', goTo)
+
+    window.addEventListener('scroll', goTo)
+
+    function goTo() {
+        const section = [...document.querySelectorAll('section')]
+
+        const sectionPos = section.map(elem => elem.offsetTop)
+
+        const sectionName = ['Агроклімат', 'Про нас', 'Наші послуги', 'Наша команда',
+            'Наші винагороди', 'Вакансії']
+
+        let itemOffset = []
+        let windowOffset = window.pageYOffset
+
+        for (let i = 0; i < sectionPos.length; i++) {
+            itemOffset.push(sectionPos.slice(i, i + 2))
+        }
+
+        itemOffset.forEach((elem, idx) => {
+            goToItems[idx].classList.remove('active')
+            goToItems[idx].innerHTML = idx + 1
+            if (elem[0] <= windowOffset && elem[1] > windowOffset) {
+                goToItems[idx].classList.add('active')
+                goToItems[idx].innerHTML = sectionName[idx]
+            } else if (elem[0] <= windowOffset && !elem[1]) {
+                goToItems[idx].classList.add('active')
+                goToItems[idx].innerHTML = sectionName[idx]
             }
         })
+    }
+
+    goToItems.forEach((elem, index) => {
+
+        elem.addEventListener('click', function () {
+            const block = elem.getAttribute('data-go')
+            document.querySelector('' + block).scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            })
+        })
     })
-    elem.addEventListener('mouseout', function () {
-        this.innerHTML = index + 1
-    })
-})
+}
 
 function helloConsole() {
     const staticText = 'Made with ❤️ by Demiweb';
@@ -114,7 +173,6 @@ function helloConsole() {
         window.console.log(banner, ...styler);
     }
 }
-
 
 helloConsole();
 

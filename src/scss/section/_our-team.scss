@@ -22,14 +22,19 @@
       h2 {
         color: white;
         margin-bottom: 50px;
+        font-size: 30px;
       }
       ul{
         columns: 3;
         list-style: none;
         li {
           margin-right: 83px;
-          svg {
+          div {
             margin-bottom: 15px;
+            img {
+              width: 24px;
+              height: 24px;
+            }
           }
           span{
             margin-bottom: 30px;
