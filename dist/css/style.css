@@ -132,12 +132,16 @@ p {
   }
 }
 .hero .hero-bg {
-  background: transparent;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .hero .breadcrumbs {
   position: absolute;
@@ -159,6 +163,9 @@ p {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.hero .hero__wrapper .hero__content {
+  z-index: 5;
 }
 .hero .hero__wrapper .hero__content .hero__logo {
   margin-bottom: 36px;
@@ -580,9 +587,9 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  -webkit-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .vacancies .vacancies__wrapper .vacancies__body .vacancies__list .list__item > div:last-child > div:first-child {
   -webkit-box-flex: 0;
@@ -637,7 +644,7 @@ p {
           transform: rotate(180deg);
 }
 .vacancies .vacancies__wrapper .vacancies__body .vacancies__list .list__item.active > div:last-child {
-  max-height: inherit;
+  max-height: 400px;
   padding: 60px 40px;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -734,7 +741,6 @@ p {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 30px 0;
   }
   .vacancies .vacancies__wrapper .vacancies__body .vacancies__list .list__item > div:last-child > div:first-child {
     width: 100%;
@@ -742,6 +748,9 @@ p {
   }
   .vacancies .vacancies__wrapper .vacancies__body .vacancies__list .list__item > div:last-child > div:last-child {
     margin-left: auto;
+  }
+  .vacancies .vacancies__wrapper .vacancies__body .vacancies__list .list__item.active > div:last-child {
+    max-height: 800px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -821,8 +830,12 @@ p {
   .vacancies .vacancies__wrapper .vacancies__body .vacancies__list .list__item > div:last-child {
     padding: 0;
   }
+  .vacancies .vacancies__wrapper .vacancies__body .vacancies__list .list__item > div:last-child > div:first-child {
+    max-height: 198px;
+  }
   .vacancies .vacancies__wrapper .vacancies__body .vacancies__list .list__item.active > div:last-child {
     padding: 30px 0;
+    max-height: 620px;
   }
 }
 .accordion {

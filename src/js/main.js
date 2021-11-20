@@ -73,7 +73,7 @@ if (!goToItems.length) {
 
 } else {
 
-    goToItems.forEach((elem, index) => {
+    goToItems.forEach((elem) => {
         elem.addEventListener('click', function () {
             const block = elem.getAttribute('data-go')
             document.querySelector('' + block).scrollIntoView({

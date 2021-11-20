@@ -82,7 +82,7 @@
               padding: 0;
               overflow: hidden;
               display: flex;
-              transition: all .6s ease;
+              transition: all 1s ease-in-out;
 
               > div {
                 &:first-child {
@@ -133,7 +133,7 @@
             }
 
             &:last-child {
-              max-height: inherit;
+              max-height: 400px;
               padding: 60px 40px;
               align-items: center;
             }

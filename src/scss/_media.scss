@@ -103,7 +103,6 @@
             > div {
               &:last-child {
                 flex-direction: column;
-                padding: 30px 0;
 
                 > div {
                   &:first-child {
@@ -115,6 +114,14 @@
                     margin-left: auto;
                   }
                 }
+              }
+            }
+          }
+
+          .list__item.active {
+            > div {
+              &:last-child {
+                max-height: 800px;
               }
             }
           }
@@ -255,6 +262,7 @@
 
                 > div {
                   &:first-child {
+                    max-height: 198px;
                   }
                 }
               }
@@ -263,13 +271,10 @@
 
           .list__item.active {
             > div {
-              &:first-child {
-                a {
-                }
-              }
 
               &:last-child {
                 padding: 30px 0;
+                max-height: 620px;
               }
             }
           }
