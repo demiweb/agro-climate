@@ -52,7 +52,7 @@ new Swiper('.our-awards-slider', {
 });
 
 jarallax(document.querySelectorAll('.jarallax'), {
-    speed: 0.1
+    speed: .5
 });
 
 
