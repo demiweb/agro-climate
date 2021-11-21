@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "ios-parallax": "^1.0.1",
+    "jarallax": "^1.12.8",
     "jquery": "^3.6.0",
     "lozad": "^1.16.0",
     "rellax": "^1.12.1"

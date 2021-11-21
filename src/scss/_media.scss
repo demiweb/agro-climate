@@ -162,6 +162,12 @@
     }
   }
 
+  .about {
+    .about-bg {
+      height: 279px;
+    }
+  }
+
   .services {
     .services__wrapper {
       .services__body {
@@ -171,6 +177,12 @@
       }
     }
   }
+
+  .our-team {
+    .our-team-bg {
+      height: 320px;
+    }
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -178,21 +190,11 @@
     display: none;
   }
 
-  .hero {
-    .hero-bg {
-    }
-  }
-
   .about {
     > img {
       &:nth-child(2) {
         display: none;
       }
-    }
-
-    .about-bg {
-      height: 279px;
-      background-size: cover;
     }
   }
 
@@ -217,7 +219,6 @@
   .our-team {
     .our-team-bg {
       height: 137px;
-      background-size: cover;
     }
   }
 

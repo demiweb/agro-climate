@@ -51,21 +51,10 @@ new Swiper('.our-awards-slider', {
     }
 });
 
-let allLazyLoad = [...document.querySelectorAll('.lazyload')];
+jarallax(document.querySelectorAll('.jarallax'), {
+    speed: 0.1
+});
 
-function allLozadImg() {
-    allLazyLoad.forEach((el) => {
-        const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
-        observer.observe();
-        el.addEventListener('load', () => {
-            el.classList.add('is-loaded')
-        })
-    })
-}
-
-allLozadImg();
-
-new Rellax('.parallax')
 
 const goToItems = [...document.querySelectorAll('.go-to span')]
 
@@ -116,23 +105,43 @@ if (!goToItems.length) {
     }
 }
 
+let allLazyLoad = [...document.querySelectorAll('.lazyload')];
 
-document.querySelectorAll('.vacancies__list .list__item .btn').forEach(el => {
-    el.addEventListener('click', function (e) {
-        e.preventDefault()
-
-        let content = el.parentElement.nextElementSibling
-
-        if (!content.parentElement.classList.contains('active')) {
-            document.querySelectorAll('.vacancies__list .list__item .content').forEach(el => {
-                el.parentElement.classList.remove('active')
-            })
-            this.parentElement.parentElement.classList.add('active')
-        } else {
-            this.parentElement.parentElement.classList.remove('active')
-        }
+function allLozadImg() {
+    allLazyLoad.forEach((el) => {
+        const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
+        observer.observe();
+        el.addEventListener('load', () => {
+            el.classList.add('is-loaded')
+        })
     })
-})
+}
+
+allLozadImg();
+
+const vacanciesBtn = [...document.querySelectorAll('.vacancies__list .list__item .btn')]
+
+if (!vacanciesBtn.length) {
+
+} else {
+    vacanciesBtn.forEach(el => {
+        el.addEventListener('click', function (e) {
+            e.preventDefault()
+
+            let content = el.parentElement.nextElementSibling
+
+            if (!content.parentElement.classList.contains('active')) {
+                document.querySelectorAll('.vacancies__list .list__item .content').forEach(el => {
+                    el.parentElement.classList.remove('active')
+                })
+                this.parentElement.parentElement.classList.add('active')
+            } else {
+                this.parentElement.parentElement.classList.remove('active')
+            }
+        })
+    })
+}
+
 
 function helloConsole() {
     const staticText = 'Made with ❤️ by Demiweb';
@@ -174,8 +183,3 @@ function helloConsole() {
 }
 
 helloConsole();
-
-
-
-
-

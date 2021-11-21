@@ -52,7 +52,8 @@
     </div>
 
     <section class="hero" id="hero">
-        <div class="hero-bg" style="background-image: url('img/hero-bg.png')">
+        <div class="hero-bg jarallax">
+            <img src="img/hero-bg.png" alt="hero-bg" class="jarallax-img">
         </div>
         <div class="container">
             <div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList"><span
@@ -81,21 +82,20 @@
     </section>
 
     <section class="about" id="about">
-        <img
-                data-src="img/leaf-1.png"
-                alt="leaf"
-                class="lazyload parallax leaf"
-                data-rellax-speed="2">
+        <img src="img/leaf-1.png"
+             alt="leaf"
+             class="lazyload leaf"
+             data-jarallax-element="-100 0">
         <img
                 data-src="img/leaf-2.png"
                 alt="leaf"
-                class="lazyload parallax leaf"
-                data-rellax-speed="-3">
+                class="lazyload leaf"
+                data-jarallax-element="100 0">
         <img
                 data-src="img/leaf-3.png"
                 alt="leaf"
-                class="lazyload parallax leaf"
-                data-rellax-speed="10">
+                class="lazyload leaf"
+                data-jarallax-element="-260 0">
         <div class="container">
             <div class="about__wrapper">
                 <div class="about__text">
@@ -153,7 +153,7 @@
                 </div>
             </div>
         </div>
-        <div class="about-bg" data-z-index="1" data-parallax="scroll" data-image-src="img/about-bg.png">
+        <div class="about-bg jarallax" style="background-image: url('img/about-bg.png')">
         </div>
     </section>
 
@@ -161,13 +161,13 @@
         <img
                 data-src="img/leaf-4.png"
                 alt="leaf"
-                class="lazyload parallax leaf"
-                data-rellax-speed=-2>
+                class="lazyload leaf"
+                data-jarallax-element="-260 0">
         <img
                 data-src="img/leaf-5.png"
                 alt="leaf"
-                class="lazyload parallax leaf"
-                data-rellax-speed="-2">
+                class="lazyload leaf"
+                data-jarallax-element="260 0">
         <div class="container">
             <div class="services__wrapper">
                 <h2 data-aos="zoom-in" data-aos-duration="1000">
@@ -318,12 +318,12 @@
                 data-src="img/leaf-6.png"
                 alt="leaf"
                 class="lazyload parallax leaf"
-                data-rellax-speed="-2">
+                data-jarallax-element="-150 0">
         <img
                 data-src="img/leaf-7.png"
                 alt="leaf"
-                class="lazyload parallax leaf"
-                data-rellax-speed="-1">
+                class="lazyload leaf"
+                data-jarallax-element="130 0">
         <div class="container">
             <div class="our-team__wrapper">
                 <h2 data-aos="zoom-in" data-aos-duration="600">
@@ -405,7 +405,8 @@
                 </ul>
             </div>
         </div>
-        <div class="our-team-bg" data-z-index="5" data-parallax="scroll" data-image-src="img/our-team-bg.png">
+        <div class="our-team-bg jarallax">
+            <img src="img/our-team-bg.png" alt="our-team-bg" class="jarallax-img">
         </div>
     </section>
 
@@ -645,11 +646,14 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+<script src="js/jarallax-element.js"></script>
 <script src="js/main.min.js"></script>
 <!--<script src="https://agroclimate.com.ua/wp-content/themes/agroclimat/js/scripts.min.js"></script>-->
 <!--<script src="https://agroclimate.com.ua/wp-content/themes/agroclimat/js/main.js"></script>-->
 </body>
 </html>
+s

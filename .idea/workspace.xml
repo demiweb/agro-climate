@@ -11,6 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99c24fde-5491-405e-bdae-3389d3dc187e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/scss/assist/_jarallax.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/agro_climate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/agro_climate.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.min.css" afterDir="false" />
@@ -20,9 +23,12 @@
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_layout.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_media.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_media.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/assist/_go-to.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/assist/_go-to.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/section/_about.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/section/_about.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/section/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/section/_hero.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/section/_vacantcies.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/section/_vacantcies.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/services.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,14 +67,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\demiw\WebstormProjects\agro_climate\src\img\svg" />
-      <recent name="C:\Users\demiw\WebstormProjects\agro_climate\src\img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\demiw\WebstormProjects\agro_climate\src\img\svg" />
       <recent name="C:\Users\demiw\WebstormProjects\agro_climate\src\img" />
       <recent name="C:\Users\demiw\WebstormProjects\agro_climate\src\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\demiw\WebstormProjects\agro_climate\src\img\svg" />
+      <recent name="C:\Users\demiw\WebstormProjects\agro_climate\src\img" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -90,7 +96,9 @@
       <workItem from="1637318983981" duration="6876000" />
       <workItem from="1637325991524" duration="9646000" />
       <workItem from="1637335774361" duration="2638000" />
-      <workItem from="1637344056930" duration="12149000" />
+      <workItem from="1637344056930" duration="12410000" />
+      <workItem from="1637377854116" duration="231000" />
+      <workItem from="1637499666328" duration="4162000" />
     </task>
     <servers />
   </component>
