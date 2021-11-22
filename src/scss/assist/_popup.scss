@@ -1,6 +1,7 @@
 @import "../vars";
 
 .popup {
+
   &:after {
     content: '';
     position: fixed;
@@ -9,7 +10,6 @@
     top: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-
   }
 
   .popup__wrapper {
@@ -18,7 +18,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 646px;
-    height: calc(100vh - 40px);
+    height: calc(100vh - 80px);
     background: #F6F8FB;
     padding: 50px 30px;
     display: flex;
