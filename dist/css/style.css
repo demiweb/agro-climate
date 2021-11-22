@@ -131,11 +131,9 @@ p {
 
 .popup:after {
   content: "";
+  height: 100vh;
+  width: 100vw;
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   background: rgba(0, 0, 0, 0.5);
 }
 .popup .popup__wrapper {
@@ -146,7 +144,7 @@ p {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 646px;
-  height: calc(100vh - 80px);
+  max-height: calc(100vh - 80px);
   background: #F6F8FB;
   padding: 50px 30px;
   display: -webkit-box;
@@ -158,6 +156,7 @@ p {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-y: auto;
 }
 .popup .popup__wrapper .close-popup {
   position: absolute;
@@ -285,14 +284,14 @@ p {
 .services-popup.services-popup--visible:after {
   content: "";
   opacity: 1;
-  z-index: 30;
+  z-index: 100;
 }
 .services-popup.services-popup--visible .services-popup__wrapper {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 1;
-  z-index: 50;
+  z-index: 150;
 }
 
 .vacancies-popup:after {
@@ -330,14 +329,14 @@ p {
 .vacancies-popup.vacancies-popup--visible:after {
   content: "";
   opacity: 1;
-  z-index: 30;
+  z-index: 100;
 }
 .vacancies-popup.vacancies-popup--visible .vacancies-popup__wrapper {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 1;
-  z-index: 50;
+  z-index: 150;
 }
 
 .hero {
@@ -393,7 +392,7 @@ p {
           justify-content: center;
 }
 .hero .hero__wrapper .hero__content {
-  z-index: 5;
+  z-index: 10;
 }
 .hero .hero__wrapper .hero__content .hero__logo {
   margin-bottom: 36px;
