@@ -183,11 +183,52 @@
       height: 320px;
     }
   }
+
+  .vacancies {
+    .vacancies__wrapper {
+      .vacancies__body {
+        .vacancies__list {
+          .list__item {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 646px) {
+  .popup {
+    .popup__wrapper {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      overflow-y: scroll;
+
+      .popup__form {
+        form {
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 575px) {
   .go-to {
     display: none;
+  }
+
+  .popup {
+    .popup__wrapper {
+      padding: 20px 15px;
+
+      .popup__title {
+        font-size: 24px;
+      }
+    }
   }
 
   .about {

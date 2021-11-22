@@ -32,6 +32,7 @@
     .vacancies__body {
       .vacancies__list {
         list-style: none;
+        margin-bottom: 0;
 
         > :not(:first-child) {
           margin-top: 66px;
@@ -40,6 +41,10 @@
         .list__item {
           margin: 50px auto 109px;
           max-width: 1370px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
 
           > div {
             &:first-child {

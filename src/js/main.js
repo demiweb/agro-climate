@@ -94,10 +94,10 @@ if (!goToItems.length) {
         itemOffset.forEach((elem, idx) => {
             goToItems[idx].classList.remove('active')
             goToItems[idx].innerHTML = idx + 1
-            if (elem[0] - 1 <= windowOffset && elem[1] - 1 > windowOffset) {
+            if (elem[0] - 3 <= windowOffset && elem[1] - 3 > windowOffset) {
                 goToItems[idx].classList.add('active')
                 goToItems[idx].innerHTML = sectionName[idx]
-            } else if (elem[0] - 1 <= windowOffset && !elem[1]) {
+            } else if (elem[0] - 3 <= windowOffset && !elem[1]) {
                 goToItems[idx].classList.add('active')
                 goToItems[idx].innerHTML = sectionName[idx]
             }
@@ -119,12 +119,12 @@ function allLozadImg() {
 
 allLozadImg();
 
-const vacanciesBtn = [...document.querySelectorAll('.vacancies__list .list__item .btn')]
+const showVacanciesBtn = [...document.querySelectorAll('.vacancies__list .list__item .btn')]
 
-if (!vacanciesBtn.length) {
+if (!showVacanciesBtn.length) {
 
 } else {
-    vacanciesBtn.forEach(el => {
+    showVacanciesBtn.forEach(el => {
         el.addEventListener('click', function (e) {
             e.preventDefault()
 
@@ -142,6 +142,67 @@ if (!vacanciesBtn.length) {
     })
 }
 
+const orderServiceBtn = [...document.querySelectorAll('.order-service')]
+
+if (!orderServiceBtn.length) {
+
+} else {
+    orderServiceBtn.forEach(elem => {
+        elem.addEventListener('click', function (e) {
+            e.preventDefault()
+
+            const orderPopup = document.querySelector('.services-popup')
+            const orderPopupClose = document.querySelector('.services-popup .close-popup')
+            const body = document.querySelector('body')
+
+            orderPopup.classList.add('services-popup--visible')
+            body.classList.add('no-scroll')
+
+            orderPopupClose.addEventListener('click', function () {
+                orderPopup.classList.remove('services-popup--visible')
+                body.classList.remove('no-scroll')
+            })
+
+        })
+    })
+}
+
+const sendResumeBtn = [...document.querySelectorAll('.vacancies .send-resume')]
+
+if (!sendResumeBtn.length) {
+
+} else {
+    sendResumeBtn.forEach(elem => {
+        elem.addEventListener('click', function (e) {
+            e.preventDefault()
+
+            const vacanciesPopup = document.querySelector('.vacancies-popup')
+            const vacanciesPopupClose = document.querySelector('.vacancies-popup .close-popup')
+            const vacanciesPopupUploadFile = document.querySelector('.vacancies-popup .vacancies-popup__wrapper input[type=file]')
+            const body = document.querySelector('body')
+
+            vacanciesPopupUploadFile.addEventListener('change', function () {
+                document.querySelector('.vacancies-popup .vacancies-popup__wrapper .file-name').innerHTML = this.files[0].name
+            })
+            vacanciesPopup.classList.add('vacancies-popup--visible')
+            body.classList.add('no-scroll')
+
+            vacanciesPopupClose.addEventListener('click', function () {
+                vacanciesPopup.classList.remove('vacancies-popup--visible')
+                body.classList.remove('no-scroll')
+            })
+
+        })
+    })
+}
+
+let elements = document.getElementsByClassName('.popup input[type=tel]');
+for (let i = 0; i < elements.length; i++) {
+    console.log(elements[i])
+    new IMask(elements[i], {
+        mask: '+{38}() - -',
+    });
+}
 
 function helloConsole() {
     const staticText = 'Made with ❤️ by Demiweb';
@@ -183,3 +244,7 @@ function helloConsole() {
 }
 
 helloConsole();
+
+$(function() {
+    $('.popup input[type=tel]').mask('+38 (000) 000-00-00');
+});

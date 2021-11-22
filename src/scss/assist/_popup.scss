@@ -1,0 +1,147 @@
+@import "../vars";
+
+.popup {
+  &:after {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+  }
+
+  .popup__wrapper {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 646px;
+    background: #F6F8FB;
+    border-radius: 20px;
+    padding: 47px 80px;
+    display: flex;
+    flex-direction: column;
+
+    .close-popup {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+
+      :hover {
+        cursor: pointer;
+      }
+    }
+
+    .popup__title {
+      font-size: 32px;
+      line-height: 37px;
+      color: $green-main-color;
+      margin-bottom: 40px;
+    }
+
+
+    .popup__form {
+      form {
+        label {
+          width: 100%;
+          color: $dark-2-color;
+          margin-bottom: 25px;
+
+          input {
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid #D2DED9;
+            box-sizing: border-box;
+            border-radius: 10px;
+            height: 48px;
+            padding-left: 30px;
+
+            &::placeholder {
+              color: #C9C9C9;
+            }
+          }
+
+          input[type='checkbox'] {
+            display: none;
+
+            + span {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 21px;
+              height: 21px;
+              background: #FFFFFF;
+              border: 2px solid #5B62FF;
+              box-sizing: border-box;
+              border-radius: 4px;
+              margin-right: 15px;
+
+              &:hover {
+                cursor: pointer;
+              }
+
+              svg {
+                path {
+                  stroke: #FFFFFF;
+                }
+              }
+            }
+          }
+
+          input[type='checkbox']:checked {
+            + span {
+              svg {
+                path {
+                  stroke: #5B62FF;
+                }
+              }
+            }
+          }
+
+          input[type='file'] {
+            display: none;
+            + span {
+              padding: 8px 25px;
+              border: 1px solid #616161;
+              box-sizing: border-box;
+              border-radius: 100px;
+              :hover {
+                cursor: pointer;
+              }
+            }
+          }
+
+          input[type='file']:checked {
+            display: block;
+          }
+
+          input[type='email']:invalid {
+            border: 1px solid #D74936;
+          }
+
+          textarea {
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid #D2DED9;
+            box-sizing: border-box;
+            border-radius: 10px;
+            height: 176px;
+            padding-left: 30px;
+            padding-top: 13px;
+            resize: none;
+
+            &::placeholder {
+              color: #C9C9C9;
+            }
+          }
+        }
+
+        button {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

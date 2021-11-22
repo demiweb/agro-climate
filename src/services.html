@@ -51,10 +51,104 @@
         </ul>
     </div>
 
+    <div class="services-popup popup">
+        <div class="services-popup__wrapper popup__wrapper">
+            <div class="close-popup">
+                <img src="img/svg/close.svg" alt="close-popup">
+            </div>
+            <span class="popup__title">
+                Замовити послугу
+            </span>
+            <div class="popup__form">
+                <form>
+                    <label>
+                        Ім'я
+                        <input type="text">
+                    </label>
+                    <label>
+                        E-mail
+                        <input type="email">
+                    </label>
+                    <label>
+                        Номер телефону
+                        <input type="tel" maxlength="12">
+                    </label>
+                    <label>
+                        Ваша компанія
+                        <input type="text">
+                    </label>
+                    <label>
+                        Послуга
+                        <input type="text" placeholder="Тунельна вентиляція">
+                    </label>
+                    <label>
+                        <input type="checkbox" required>
+                        <span>
+                            <svg width="12" height="9" viewBox="0 0 12 9" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 4.5L4 7.5L10.5 1" stroke="#5B62FF" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        Даю згоду на обробку даних
+                    </label>
+                    <button type="submit" class="btn btn-green">Відправити</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="vacancies-popup popup">
+        <div class="vacancies-popup__wrapper popup__wrapper">
+            <div class="close-popup">
+                <img src="img/svg/close.svg" alt="close-popup">
+            </div>
+            <span class="popup__title">
+                Замовити послугу
+            </span>
+            <div class="popup__form">
+                <form>
+                    <label>
+                        Ім'я
+                        <input type="text">
+                    </label>
+                    <label>
+                        E-mail
+                        <input type="email" pattern="[^\s]+">
+                    </label>
+                    <label>
+                        Номер телефону
+                        <input type="tel">
+                    </label>
+                    <label>
+                        Повідомлення
+                        <textarea type="text"></textarea>
+                    </label>
+                    <label>
+                        <input type="checkbox" required>
+                        <span>
+                            <svg width="12" height="9" viewBox="0 0 12 9" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+<path d="M1 4.5L4 7.5L10.5 1" stroke="#5B62FF" stroke-width="2" stroke-linecap="round"/>
+</svg>
+                        </span>
+                        Даю згоду на обробку даних
+                    </label>
+                    <label>
+                        <input type="file">
+                        <span>Додати файл</span>
+                        <span class="file-name">Файл не доданий</span>
+                    </label>
+                    <button type="submit" class="btn btn-green">Відправити</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <section class="hero" id="hero">
         <div class="hero-bg jarallax">
             <img src="img/hero-bg.png" alt="hero-bg" class="jarallax-img">
         </div>
+
         <div class="container">
             <div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList"><span
                     itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a
@@ -73,7 +167,7 @@
                         Підбираємо, привозимо і встановлюємо енергозберігаюче обладнання
                         для промислових і фермерських господарств.
                     </p>
-                    <a href="#" class="btn btn-green">
+                    <a href="#" class="btn btn-green order-service">
                         Замовити послугу
                     </a>
                 </div>
@@ -87,12 +181,12 @@
              class="leaf"
              data-jarallax-element="-100 0">
         <img
-                data-src="img/leaf-2.png"
+                src="img/leaf-2.png"
                 alt="leaf"
                 class="leaf"
                 data-jarallax-element="100 0">
         <img
-                data-src="img/leaf-3.png"
+                src="img/leaf-3.png"
                 alt="leaf"
                 class="leaf"
                 data-jarallax-element="-200 0">
@@ -159,12 +253,12 @@
 
     <section class="services" id="services">
         <img
-                data-src="img/leaf-4.png"
+                src="img/leaf-4.png"
                 alt="leaf"
                 class="leaf"
                 data-jarallax-element="-200 0">
         <img
-                data-src="img/leaf-5.png"
+                src="img/leaf-5.png"
                 alt="leaf"
                 class="leaf"
                 data-jarallax-element="170 0">
@@ -203,7 +297,7 @@
                                     Vitae id eget etiam tortor platea arcu, auctor sit.
                                 </li>
                             </ul>
-                            <a href="#" class="btn btn-green">
+                            <a href="#" class="btn btn-green order-service">
                                 Замовити послугу
                             </a>
                         </div>
@@ -236,7 +330,7 @@
                                     Vitae id eget etiam tortor platea arcu, auctor sit.
                                 </li>
                             </ul>
-                            <a href="#" class="btn btn-green">
+                            <a href="#" class="btn btn-green order-service">
                                 Замовити послугу
                             </a>
                         </div>
@@ -269,7 +363,7 @@
                                     Vitae id eget etiam tortor platea arcu, auctor sit.
                                 </li>
                             </ul>
-                            <a href="#" class="btn btn-green">
+                            <a href="#" class="btn btn-green order-service">
                                 Замовити послугу
                             </a>
                         </div>
@@ -302,7 +396,7 @@
                                     Vitae id eget etiam tortor platea arcu, auctor sit.
                                 </li>
                             </ul>
-                            <a href="#" class="btn btn-green">
+                            <a href="#" class="btn btn-green order-service">
                                 Замовити послугу
                             </a>
                         </div>
@@ -315,12 +409,12 @@
 
     <section class="our-team" id="our-team">
         <img
-                data-src="img/leaf-6.png"
+                src="img/leaf-6.png"
                 alt="leaf"
                 class="leaf"
                 data-jarallax-element="-150 0">
         <img
-                data-src="img/leaf-7.png"
+                src="img/leaf-7.png"
                 alt="leaf"
                 class="leaf"
                 data-jarallax-element="130 0">
@@ -529,7 +623,7 @@
                                     diam a ut. Sagittis sed auctor nibh proin erat blandit. Augue id ut sapien
                                     posuere nunc placerat phasellus.
                                 </p>
-                                <a href="#" class="btn btn-green">
+                                <a href="#" class="btn btn-green send-resume">
                                     Відправити резюме
                                 </a>
                             </div>
@@ -563,7 +657,7 @@
                                     diam a ut. Sagittis sed auctor nibh proin erat blandit. Augue id ut sapien
                                     posuere nunc placerat phasellus.
                                 </p>
-                                <a href="#" class="btn btn-green">
+                                <a href="#" class="btn btn-green send-resume">
                                     Відправити резюме
                                 </a>
                             </div>
@@ -597,7 +691,7 @@
                                     diam a ut. Sagittis sed auctor nibh proin erat blandit. Augue id ut sapien
                                     posuere nunc placerat phasellus.
                                 </p>
-                                <a href="#" class="btn btn-green">
+                                <a href="#" class="btn btn-green send-resume">
                                     Відправити резюме
                                 </a>
                             </div>
@@ -631,7 +725,7 @@
                                     diam a ut. Sagittis sed auctor nibh proin erat blandit. Augue id ut sapien
                                     posuere nunc placerat phasellus.
                                 </p>
-                                <a href="#" class="btn btn-green">
+                                <a href="#" class="btn btn-green send-resume">
                                     Відправити резюме
                                 </a>
                             </div>
@@ -646,14 +740,11 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
-<!--<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
 <script src="js/jarallax-element.js"></script>
 <script src="js/main.min.js"></script>
-<!--<script src="https://agroclimate.com.ua/wp-content/themes/agroclimat/js/scripts.min.js"></script>-->
-<!--<script src="https://agroclimate.com.ua/wp-content/themes/agroclimat/js/main.js"></script>-->
 </body>
 </html>
-s
