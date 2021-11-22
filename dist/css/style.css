@@ -215,6 +215,41 @@ p {
 .popup .popup__wrapper .popup__form form label input[type=file] + span :hover {
   cursor: pointer;
 }
+.popup .popup__wrapper .popup__form form label input[type=checkbox] {
+  display: none;
+}
+.popup .popup__wrapper .popup__form form label input[type=checkbox] + span {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #666;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2px;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+.popup .popup__wrapper .popup__form form label input[type=checkbox] + span svg path {
+  stroke: transparent;
+}
+.popup .popup__wrapper .popup__form form label input[type=checkbox]:checked + span {
+  background: #007aff;
+  border: 1px solid #007aff;
+}
+.popup .popup__wrapper .popup__form form label input[type=checkbox]:checked + span svg path {
+  stroke: white;
+}
 .popup .popup__wrapper .popup__form form label input[type=file]:checked {
   display: block;
 }
@@ -248,11 +283,11 @@ p {
 .popup .popup__wrapper .popup__form form label textarea::placeholder {
   color: #C9C9C9;
 }
-.popup .popup__wrapper .popup__form form .checkbox input {
-  color: #97abc9;
-  margin-right: 5px;
-  width: 13px !important;
-  height: 13px !important;
+.popup .popup__wrapper .popup__form form .checkbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 .popup .popup__wrapper .popup__form form button {
   margin-left: auto;
