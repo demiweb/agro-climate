@@ -203,12 +203,6 @@ p {
 .popup .popup__wrapper .popup__form form label input::placeholder {
   color: #C9C9C9;
 }
-.popup .popup__wrapper .popup__form form label input[type=checkbox] {
-  width: 13px;
-  height: 13px;
-  color: #97abc9;
-  margin-right: 5px;
-}
 .popup .popup__wrapper .popup__form form label input[type=file] {
   display: none;
 }
@@ -254,6 +248,12 @@ p {
 }
 .popup .popup__wrapper .popup__form form label textarea::placeholder {
   color: #C9C9C9;
+}
+.popup .popup__wrapper .popup__form form .checkbox input {
+  color: #97abc9;
+  margin-right: 5px;
+  width: auto;
+  height: auto;
 }
 .popup .popup__wrapper .popup__form form button {
   margin-left: auto;
