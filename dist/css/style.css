@@ -129,22 +129,24 @@ p {
   z-index: -1;
 }
 
-.popup:after {
-  content: "";
-  height: 100vh;
-  width: 100vw;
+.popup {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: rgba(0, 0, 0, 0.5);
 }
 .popup .popup__wrapper {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  position: relative;
+  -webkit-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
   width: 646px;
-  max-height: calc(100vh - 80px);
+  height: auto;
+  margin: 120px auto 120px;
   background: #F6F8FB;
   padding: 50px 30px;
   display: -webkit-box;
@@ -156,7 +158,6 @@ p {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow-y: auto;
 }
 .popup .popup__wrapper .close-popup {
   position: absolute;
@@ -258,59 +259,50 @@ p {
   margin-left: auto;
 }
 
-.services-popup:after {
-  content: "";
+.services-popup {
   opacity: 0;
   z-index: -10;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .services-popup .services-popup__wrapper {
   opacity: 0;
-  -webkit-transform: translate(-50%, -200%);
-      -ms-transform: translate(-50%, -200%);
-          transform: translate(-50%, -200%);
   z-index: -10;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .services-popup .services-popup__wrapper .popup__form form label:nth-child(6) {
   font-size: 14px;
   color: #97abc9;
 }
 
-.services-popup.services-popup--visible:after {
-  content: "";
-  opacity: 1;
+.services-popup.services-popup--visible {
   z-index: 100;
+  opacity: 1;
 }
 .services-popup.services-popup--visible .services-popup__wrapper {
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
   opacity: 1;
   z-index: 150;
 }
 
-.vacancies-popup:after {
-  content: "";
+.vacancies-popup {
   opacity: 0;
   z-index: -10;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .vacancies-popup .vacancies-popup__wrapper {
   opacity: 0;
-  -webkit-transform: translate(-50%, -200%);
-      -ms-transform: translate(-50%, -200%);
-          transform: translate(-50%, -200%);
   z-index: -10;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .vacancies-popup .vacancies-popup__wrapper .popup__form form label:nth-child(5) {
   font-size: 14px;
@@ -326,15 +318,14 @@ p {
   width: auto;
 }
 
-.vacancies-popup.vacancies-popup--visible:after {
-  content: "";
+.vacancies-popup.vacancies-popup--visible {
   opacity: 1;
   z-index: 100;
 }
 .vacancies-popup.vacancies-popup--visible .vacancies-popup__wrapper {
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(0%, 0%);
+      -ms-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
   opacity: 1;
   z-index: 150;
 }
@@ -1024,8 +1015,9 @@ p {
 }
 @media screen and (max-width: 646px) {
   .popup .popup__wrapper {
-    overflow-y: scroll;
     width: calc(100% - 30px);
+    height: auto;
+    margin: 120px auto 120px;
   }
   .popup .popup__wrapper .popup__form form button {
     width: 100%;

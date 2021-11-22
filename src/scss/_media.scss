@@ -203,9 +203,9 @@
 @media screen and (max-width: 646px) {
   .popup {
     .popup__wrapper {
-      overflow-y: scroll;
       width: calc(100% - 30px);
-
+      height: auto;
+      margin: 120px auto 120px;
       .popup__form {
         form {
           button {
