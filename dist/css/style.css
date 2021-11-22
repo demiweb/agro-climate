@@ -146,9 +146,9 @@ p {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 646px;
+  height: calc(100vh - 40px);
   background: #F6F8FB;
-  border-radius: 20px;
-  padding: 47px 80px;
+  padding: 50px 30px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -161,8 +161,8 @@ p {
 }
 .popup .popup__wrapper .close-popup {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 15px;
+  right: 15px;
 }
 .popup .popup__wrapper .close-popup :hover {
   cursor: pointer;
@@ -175,8 +175,8 @@ p {
 }
 .popup .popup__wrapper .popup__form form label {
   width: 100%;
-  color: #616161;
-  margin-bottom: 25px;
+  color: #C9C9C9;
+  margin-bottom: 10px;
 }
 .popup .popup__wrapper .popup__form form label input {
   width: 100%;
@@ -186,7 +186,7 @@ p {
           box-sizing: border-box;
   border-radius: 10px;
   height: 48px;
-  padding-left: 30px;
+  padding: 16px 30px;
 }
 .popup .popup__wrapper .popup__form form label input::-webkit-input-placeholder {
   color: #C9C9C9;
@@ -204,38 +204,10 @@ p {
   color: #C9C9C9;
 }
 .popup .popup__wrapper .popup__form form label input[type=checkbox] {
-  display: none;
-}
-.popup .popup__wrapper .popup__form form label input[type=checkbox] + span {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 21px;
-  height: 21px;
-  background: #FFFFFF;
-  border: 2px solid #5B62FF;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 4px;
-  margin-right: 15px;
-}
-.popup .popup__wrapper .popup__form form label input[type=checkbox] + span:hover {
-  cursor: pointer;
-}
-.popup .popup__wrapper .popup__form form label input[type=checkbox] + span svg path {
-  stroke: #FFFFFF;
-}
-.popup .popup__wrapper .popup__form form label input[type=checkbox]:checked + span svg path {
-  stroke: #5B62FF;
+  width: 13px;
+  height: 13px;
+  color: #97abc9;
+  margin-right: 5px;
 }
 .popup .popup__wrapper .popup__form form label input[type=file] {
   display: none;
@@ -253,7 +225,7 @@ p {
 .popup .popup__wrapper .popup__form form label input[type=file]:checked {
   display: block;
 }
-.popup .popup__wrapper .popup__form form label input[type=email]:invalid {
+.popup .popup__wrapper .popup__form form label input:invalid {
   border: 1px solid #D74936;
 }
 .popup .popup__wrapper .popup__form form label textarea {
@@ -303,10 +275,8 @@ p {
   transition: all 0.8s ease-out;
 }
 .services-popup .services-popup__wrapper .popup__form form label:nth-child(6) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  font-size: 14px;
+  color: #97abc9;
 }
 
 .services-popup.services-popup--visible:after {
@@ -335,10 +305,17 @@ p {
   transition: all 0.8s ease-out;
 }
 .vacancies-popup .vacancies-popup__wrapper .popup__form form label:nth-child(5) {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  font-size: 14px;
+  color: #97abc9;
+}
+.vacancies-popup .vacancies-popup__wrapper .popup__form form label:nth-child(6) {
+  font-size: 14px;
+  margin: 20px 0;
+}
+.vacancies-popup .vacancies-popup__wrapper .popup__form form label:nth-child(6) span {
+  margin: 3px 0;
+  display: inline-block;
+  width: auto;
 }
 
 .vacancies-popup.vacancies-popup--visible:after {
@@ -1036,10 +1013,8 @@ p {
 }
 @media screen and (max-width: 646px) {
   .popup .popup__wrapper {
-    width: 100vw;
-    height: 100vh;
-    border-radius: 0;
     overflow-y: scroll;
+    width: calc(100% - 30px);
   }
   .popup .popup__wrapper .popup__form form button {
     width: 100%;

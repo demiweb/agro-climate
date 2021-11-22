@@ -6,6 +6,7 @@
     opacity: 0;
     z-index: -10;
     transition: all .8s ease-out;
+
   }
 
   .vacancies-popup__wrapper {
@@ -17,7 +18,17 @@
       form {
         label {
           &:nth-child(5) {
-            display: flex;
+            font-size: 14px;
+            color: #97abc9;
+          }
+          &:nth-child(6) {
+            font-size: 14px;
+            margin: 20px 0;
+            span {
+              margin: 3px 0;
+              display: inline-block;
+              width: auto;
+            }
           }
         }
       }
