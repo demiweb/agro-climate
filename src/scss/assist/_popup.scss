@@ -80,8 +80,9 @@
           }
 
           input[type='checkbox'] {
-            width: 13px;
-            height: 13px;
+            width: 14px !important;
+            height: 14px !important;
+            padding: 0;
           }
 
           input:invalid {
