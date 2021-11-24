@@ -56,13 +56,13 @@ jarallax(document.querySelectorAll('.jarallax'), {
 });
 
 
-const goToItems = [...document.querySelectorAll('.go-to span')]
+const goToSectionItems = [...document.querySelectorAll('.go-to span')]
 
-if (!goToItems.length) {
+if (!goToSectionItems.length) {
 
 } else {
 
-    goToItems.forEach((elem) => {
+    goToSectionItems.forEach((elem) => {
         elem.addEventListener('click', function () {
             const block = elem.getAttribute('data-go')
             document.querySelector('' + block).scrollIntoView({
@@ -92,14 +92,14 @@ if (!goToItems.length) {
         }
 
         itemOffset.forEach((elem, idx) => {
-            goToItems[idx].classList.remove('active')
-            goToItems[idx].innerHTML = idx + 1
+            goToSectionItems[idx].classList.remove('active')
+            goToSectionItems[idx].innerHTML = idx + 1
             if (elem[0] - 3 <= windowOffset && elem[1] - 3 > windowOffset) {
-                goToItems[idx].classList.add('active')
-                goToItems[idx].innerHTML = sectionName[idx]
+                goToSectionItems[idx].classList.add('active')
+                goToSectionItems[idx].innerHTML = sectionName[idx]
             } else if (elem[0] - 3 <= windowOffset && !elem[1]) {
-                goToItems[idx].classList.add('active')
-                goToItems[idx].innerHTML = sectionName[idx]
+                goToSectionItems[idx].classList.add('active')
+                goToSectionItems[idx].innerHTML = sectionName[idx]
             }
         })
     }
@@ -155,6 +155,14 @@ if (!orderServiceBtn.length) {
             const orderPopupClose = document.querySelector('.services-popup .close-popup')
             const body = document.querySelector('body')
 
+            orderPopup.addEventListener('click', function (e) {
+                const item = e.target
+                if (item.classList.contains('services-popup--visible')) {
+                    orderPopup.classList.remove('services-popup--visible')
+                    body.classList.remove('no-scroll')
+                }
+            })
+
             orderPopup.classList.add('services-popup--visible')
             body.classList.add('no-scroll')
 
@@ -162,7 +170,6 @@ if (!orderServiceBtn.length) {
                 orderPopup.classList.remove('services-popup--visible')
                 body.classList.remove('no-scroll')
             })
-
         })
     })
 }
@@ -181,6 +188,14 @@ if (!sendResumeBtn.length) {
             const vacanciesPopupUploadFile = document.querySelector('.vacancies-popup .vacancies-popup__wrapper input[type=file]')
             const body = document.querySelector('body')
 
+            vacanciesPopup.addEventListener('click', function (e) {
+                const item = e.target
+                if (item.classList.contains('vacancies-popup--visible')) {
+                    vacanciesPopup.classList.remove('vacancies-popup--visible')
+                    body.classList.remove('no-scroll')
+                }
+            })
+
             vacanciesPopupUploadFile.addEventListener('change', function () {
                 document.querySelector('.vacancies-popup .vacancies-popup__wrapper .file-name').innerHTML = this.files[0].name
             })
@@ -194,14 +209,6 @@ if (!sendResumeBtn.length) {
 
         })
     })
-}
-
-let elements = document.getElementsByClassName('.popup input[type=tel]');
-for (let i = 0; i < elements.length; i++) {
-    console.log(elements[i])
-    new IMask(elements[i], {
-        mask: '+{38}() - -',
-    });
 }
 
 function helloConsole() {
@@ -245,6 +252,6 @@ function helloConsole() {
 
 helloConsole();
 
-$(function() {
+$(function () {
     $('.popup input[type=tel]').mask('+38 (000) 000-00-00');
 });

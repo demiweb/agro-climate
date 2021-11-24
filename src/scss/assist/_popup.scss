@@ -75,43 +75,13 @@
               }
             }
           }
-
-          input[type='checkbox'] {
-            display: none;
-          }
-
-          input[type='checkbox'] + span {
-            box-sizing: content-box;
-            width: 13px;
-            height: 13px;
-            border: 1px solid #666;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 2px;
-            margin-right: 5px;
-            margin-top: 3px;
-
-            svg {
-              path {
-                stroke: transparent;
-              }
-            }
-          }
-
-          input[type='checkbox']:checked + span {
-            background: #007aff;
-            border: 1px solid #007aff;
-
-            svg {
-              path {
-                stroke: white;
-              }
-            }
-          }
-
           input[type='file']:checked {
             display: block;
+          }
+
+          input[type='checkbox'] {
+            width: auto;
+            height: auto;
           }
 
           input:invalid {
@@ -134,11 +104,6 @@
             }
           }
         }
-
-        .checkbox {
-          display: flex;
-        }
-
         button {
           margin-left: auto;
         }
