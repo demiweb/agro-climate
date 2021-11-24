@@ -219,8 +219,8 @@ p {
   display: block;
 }
 .popup .popup__wrapper .popup__form form label input[type=checkbox] {
-  width: auto;
-  height: auto;
+  width: 13px;
+  height: 13px;
 }
 .popup .popup__wrapper .popup__form form label input:invalid {
   border: 1px solid #D74936;
